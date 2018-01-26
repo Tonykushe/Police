@@ -4,6 +4,11 @@ from accounts.forms import *
 from django.contrib.auth import login, logout
 
 # Create your views here.
+def home(request):
+        return render(request, 'accounts/home.html')
+
+
+
 def login_view(request):
         if request.method == 'POST':
                 form = AuthenticationForm(data = request.POST)
@@ -27,7 +32,5 @@ def signup(request):
 			return redirect('/')
 	else:
 		form = SignupForm()
-
-		args = {'form': form}
-		return render(request, 'accounts/signup.html', args)
+	return render(request, 'accounts/signup.html', {'form': form})
  
