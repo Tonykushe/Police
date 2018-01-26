@@ -8,5 +8,7 @@ app_name = 'accounts'
 urlpatterns = [
         path('login', login_view, name="login"),
         path('logout', logout, {'template_name' : 'accounts/logout.html'}, name='logout'),
+        path('signup', signup, name='signup'),
+
     
 ]
