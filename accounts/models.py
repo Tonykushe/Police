@@ -10,6 +10,10 @@ class OfficerProfile(models.Model):
 	phone		= models.IntegerField(default=0)
 	image       = models.ImageField(upload_to='profile_image', blank=True)
 
+	def __str__(self):
+		return str(self.user)
+                
+
 
 def create_profile(sender, **kwargs):
 	if kwargs['created']:

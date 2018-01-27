@@ -27,3 +27,4 @@ class SignupForm(UserCreationForm):
 			user.save()
 
 		return user
+
