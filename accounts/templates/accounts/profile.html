@@ -8,22 +8,22 @@
                         <h3>{{ user}}'s Profile</h3>
                 </div>
                 <div class="col-md-6">
-        
-                        <p> First Name: {{ user.first_name }}</p>
-                        <p> Last Name : {{ user.last_name }}</p>
-                        <p> User Name : {{ user }}</p>
-                        <p> Email : {{ user.email }}</p>
+                    <p> First Name: {{ user.first_name }}</p>
+                    <p> Last Name : {{ user.last_name }}</p>
+                    <p> User Name : {{ user }}</p>
+                    <p> Email : {{ user.email }}</p>
+                    <img src="{{ user.officerprofile.image.url }}">
                 </div>
 
                 <div class="col-md-6">
-                        <p> About Me : {{ user.officeprofile.description }}</p>
-                        <p> Location : {{ user.officeprofile.city }}</p>
-                        <p> Phone : {{ user.officeprofile.phone }}</p>
+                    <p> About Me : {{ user.officerprofile.description }}</p>
+                    <p> Location : {{ user.officerprofile.location }}</p>
+                    <p> Phone : {{ user.officerprofile.phone }}</p>
                 </div>
                 
                 <div class="col-md-6">
-                        <a href="{% url 'accounts:edit_profile' %}" class="btn btn-primary btn-md know-me-btn mt-5" role="button">Edit Profile</a>
-                        <a href="{% url 'accounts:edit_password' %}" class="btn btn-primary btn-md know-me-btn mt-5" role="button">Change Password</a>
+                    <a href="{% url 'accounts:edit_profile' %}" class="btn btn-primary btn-md know-me-btn mt-5" role="button">Edit Profile</a>
+                    <a href="{% url 'accounts:change_password' %}" class="btn btn-primary btn-md know-me-btn mt-5" role="button">Change Password</a>
 
                 </div>
         </div>

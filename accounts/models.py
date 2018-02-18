@@ -8,7 +8,7 @@ class OfficerProfile(models.Model):
 	description = models.CharField(max_length=100, default='')
 	location    = models.CharField(max_length=100, default='')
 	phone		= models.IntegerField(default=0)
-	image       = models.ImageField(upload_to='profile_image', blank=True)
+	image 		= models.ImageField(default='default.png', blank=True)
 
 	def __str__(self):
 		return str(self.user)
